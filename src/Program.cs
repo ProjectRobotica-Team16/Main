@@ -1,4 +1,5 @@
 using System;
+using MonoBrick;
 using MonoBrick.EV3;
 
 namespace src
@@ -8,16 +9,16 @@ namespace src
 		static void Main(string[] args)
 		{
 			var brick = new Brick<Sensor, Sensor, Sensor, Sensor>("WiFi");
-			ConsoleKeyInfo cki;
 			try
 			{
 				brick.Connection.Open();
-				//Programma Hier
 			}
-			catch (Exception e)
+			catch (ConnectionException e)
 			{
 				Console.WriteLine(e.Message);
+				return;
 			}
+			//Programma hier
 		}
 	}
 }
