@@ -12,23 +12,7 @@ namespace src
 			try
 			{
 				brick.Connection.Open();
-				do
-				{
-					cki = Console.ReadKey(true);
-					switch (cki.Key)
-					{
-						case ConsoleKey.UpArrow:
-							brick.MotorA.On(30);
-							break;
-						case ConsoleKey.DownArrow:
-							brick.MotorA.On(-30);
-							break;
-					}
-				} while (!cki.Key.ToString().Equals("Escape"));
-				if (brick.MotorA.IsRunning())
-				{
-					brick.MotorA.Off();
-				}
+				//Programma Hier
 			}
 			catch (Exception e)
 			{
