@@ -1,0 +1,16 @@
+body {
+	position: absolute;
+	bottom: 0px;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+}
+ul.nav.flex-column {
+	max-width: 10%;
+	height: 100%;
+	padding: 5px;
+	background-color: rgb(100, 200, 150);
+}
+.nav-link.disabled {
+	color: white;
+}
