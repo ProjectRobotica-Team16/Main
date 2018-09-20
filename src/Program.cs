@@ -18,7 +18,7 @@ namespace src
 				Console.WriteLine(ce.Message);
 				return;
 			}
-			// 2160� van t is de volledige slag naar links of recht
+			// 2160° (6 · 360°) is een volledige bocht naar links of rechts
 			// Programma hier
 		}
 
