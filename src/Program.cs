@@ -13,12 +13,18 @@ namespace src
 			{
 				brick.Connection.Open();
 			}
-			catch (ConnectionException e)
+			catch (ConnectionException ce)
 			{
-				Console.WriteLine(e.Message);
+				Console.WriteLine(ce.Message);
 				return;
 			}
+			// 2160° van t is de volledige slag naar links of recht
 			// Programma hier
+		}
+
+		static void sleep(int ms)
+		{
+			System.Threading.Thread.Sleep(ms);
 		}
 	}
 }
