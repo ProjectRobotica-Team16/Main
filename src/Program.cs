@@ -19,6 +19,7 @@ namespace src
 				return;
 			}
 			// 2160° (6 · 360°) is een volledige bocht naar links of rechts
+			// Arm (Motor C): positief = omlaag
 			// Programma hier
 		}
 
@@ -39,5 +40,26 @@ class DistanceSensor : Sensor
 	public float Read()
 	{
 		return float.Parse(this.ReadAsString());
+	}
+}
+
+class TouchSensor : MonoBrick.EV3.TouchSensor
+{
+	/**
+	 *
+	 * Reads the value as a boolean.
+	 *
+	 */
+	public bool ReadAsBoolean()
+	{
+		int value = this.Read();
+		if (value == 1)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 }
