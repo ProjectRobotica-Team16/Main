@@ -8,7 +8,7 @@ namespace src
 	{
 		static void Main(string[] args)
 		{
-			var brick = new Brick<Sensor, Sensor, Sensor, Sensor>("WiFi");
+			var brick = new Brick<ColorSensor, Sensor, Sensor, DistanceSensor>("WiFi");
 			try
 			{
 				brick.Connection.Open();
@@ -19,8 +19,10 @@ namespace src
 				return;
 			}
 			// 2160° (6 · 360°) is een volledige bocht naar links of rechts
-			// Arm (Motor C): positief = omlaag
-			// Programma hier
+			// Arm (Motor C): positief = omlaag, negatief = omhoog
+			// Grijper (Arm): 120 graden omhoog max
+			// http://firstlegoleague.nl/deelnemers/challenge/
+
 		}
 
 		static void sleep(int ms)
